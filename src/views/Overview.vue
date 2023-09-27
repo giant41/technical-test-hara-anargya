@@ -135,12 +135,12 @@ const onSortCity = column => {
     if(data.label == column.label){
       if(column.sort == '') {
         data.sort = 'up'
-      }else if (column.sort == "up"){
+      } else if (column.sort == "up") {
         data.sort = 'down'
-      }else {
+      } else {
         data.sort = ''
       }
-    }else {
+    } else {
       data.sort = ''
     }
   })
@@ -196,12 +196,12 @@ const onSort = column => {
     if(data.label == column.label){
       if(column.sort == '') {
         data.sort = 'up'
-      }else if (column.sort == "up"){
+      } else if (column.sort == "up") {
         data.sort = 'down'
-      }else {
+      } else {
         data.sort = ''
       }
-    }else {
+    } else {
       data.sort = ''
     }
   })

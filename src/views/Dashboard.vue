@@ -121,7 +121,6 @@ onMounted(()=>{
 })
 
 const rowsDetail = ref([])
-
 const show = ref(false)
 const userDetail = ref(null)
 const openDetail = row => {
