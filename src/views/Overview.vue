@@ -124,7 +124,7 @@ const getProvinceByCity = computed(() => {
   if(cityId.value){
     const prov_id = city.find(el=> el.id == cityId.value)
     return province.filter(el=> el.id == prov_id.provinsi_id)[0].name
-  }else {
+  } else {
     return null
   }
 })
@@ -135,7 +135,7 @@ const onSortCity = column => {
     if(data.label == column.label){
       if(column.sort == '') {
         data.sort = 'up'
-      } else if (column.sort == "up") {
+      } else if(column.sort == "up") {
         data.sort = 'down'
       } else {
         data.sort = ''
@@ -152,32 +152,32 @@ const shortCity = computed(()=> {
   if(Object.keys(methodSortCity.value).length > 0) { 
     const dataCities = provinceId.value ? city.filter(el=> el.provinsi_id == provinceId.value) : city
     if(methodSortCity.value.sort == 'up') { 
-      if (methodSortCity.value.label == 'ID') {
+      if(methodSortCity.value.label == 'ID') {
         return dataCities.sort((a, b) => a.id - b.id)
       } else { 
         return dataCities.sort((a, b) => {
           const ctA = a.name.toUpperCase()
           const ctB = b.name.toUpperCase()
-          if (ctA < ctB) {
+          if(ctA < ctB) {
             return -1;
           }
-          if (ctA > ctB) {
+          if(ctA > ctB) {
             return 1;
           }
           return 0;
         })
       }
     } else if(methodSortCity.value.sort == 'down') { 
-      if (methodSortCity.value.label == 'ID') { 
+      if(methodSortCity.value.label == 'ID') { 
         return dataCities.sort((a, b) => a.id - b.id).reverse()
       } else { 
         return dataCities.sort((a, b) => {
           const ctA = a.name.toUpperCase()
           const ctB = b.name.toUpperCase()
-          if (ctA < ctB) {
+          if(ctA < ctB) {
             return -1;
           }
-          if (ctA > ctB) {
+          if(ctA > ctB) {
             return 1;
           }
           return 0;
@@ -196,7 +196,7 @@ const onSort = column => {
     if(data.label == column.label){
       if(column.sort == '') {
         data.sort = 'up'
-      } else if (column.sort == "up") {
+      } else if(column.sort == "up") {
         data.sort = 'down'
       } else {
         data.sort = ''
@@ -212,33 +212,32 @@ const onSort = column => {
 const sortProvince = computed(()=> {
   if(Object.keys(methodSort.value).length > 0) { 
     if(methodSort.value.sort == 'up') { 
-      if (methodSort.value.label == 'ID') {
-
+      if(methodSort.value.label == 'ID') {
         return [...province].sort((a, b) => a.id - b.id)
       } else { 
         return [...province].sort((a, b) => {
           const provA = a.name.toUpperCase()
           const provB = b.name.toUpperCase()
-          if (provA < provB) {
+          if(provA < provB) {
             return -1;
           }
-          if (provA > provB) {
+          if(provA > provB) {
             return 1;
           }
           return 0;
         })
       }
     } else if(methodSort.value.sort == 'down') { 
-      if (methodSort.value.label == 'ID') { 
+      if(methodSort.value.label == 'ID') { 
         return [...province].sort((a, b) => a.id - b.id).reverse()
       } else { 
         return [...province].sort((a, b) => {
           const provA = a.name.toUpperCase()
           const provB = b.name.toUpperCase()
-          if (provA < provB) {
+          if(provA < provB) {
             return -1;
           }
-          if (provA > provB) {
+          if(provA > provB) {
             return 1;
           }
           return 0;
