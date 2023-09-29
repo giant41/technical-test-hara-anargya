@@ -1,4 +1,3 @@
 # Technical Test Frontend Hara Anargya
 
- Itep Darojat | [itep.dj@gmail.com]()
- demo : https://heylink-test.vercel.app/
+ Itep Darojat | [itep.dj@gmail.com]() | https://heylink-test.vercel.app/
